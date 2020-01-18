@@ -50,5 +50,21 @@ module.exports = (app) => {
         //     );
         // });
     });
-}; 
+
+    app.get('/livros/form', function(req, resp) {
+        resp.marko(require('../views/livros/form/form.marko'));
+    });
+
+    //rota será chamda sempre que for feito uma submissão no formulário
+    app.post('/livros', function(req, resp){
+        //imprimir os dados que vieram do formulário
+        console.log(req.body);
+
+        //gravar no BD
+        const livroDao = new LivroDao(db);
+        livroDao.adiciona(req.body)
+            .then(resp.redirect('/livros'))
+            .catch(erro => console.log(erro))
+    });
+};  
 
