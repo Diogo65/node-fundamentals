@@ -1,0 +1,10 @@
+DAO com promisses
+
+Middwares, minupalar um trecho de codigo antes que a requisição chegue a nossa lógica de negócio
+
+instalar o body parser
+- npm install body-parser@1.18.3 --save-exact
+
+methodOverride install
+- npm install method-override@3.0.0 --save-exact
+

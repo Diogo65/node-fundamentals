@@ -12,7 +12,6 @@ tabelaLivros.addEventListener('click', (evento) => {
 
             })
             .catch(erro => console.log(erro));
-
     }
 
 });
